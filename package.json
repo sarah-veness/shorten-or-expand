@@ -1,0 +1,17 @@
+{
+  "name": "short-or-expand",
+  "version": "1.0.0",
+  "description": "A handy tool to shorten or expand a url",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc"
+  },
+  "author": "sarah-veness",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.4.5",
+    "commander": "^11.0.0",
+    "typescript": "^5.1.6"
+  }
+}
