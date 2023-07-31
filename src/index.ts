@@ -1,5 +1,7 @@
 const { Command } = require('commander');
 
+import shorten from './shorten';
+
 const program = new Command
 
 program
@@ -14,7 +16,7 @@ const userInput = program.opts();
 if (userInput.urlToExpand) {
   console.log(`this is the url to expand: ${userInput.urlToExpand}`)
 } else if (userInput.urlToShorten) {
-  console.log(`this is the url to shorten: ${userInput.urlToShorten}`)
+  shorten(userInput.urlToShorten)
 } else {
   program.outputHelp();
 }
