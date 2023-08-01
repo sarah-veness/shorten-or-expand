@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import sanitizeUrl from './sanitize-url';
+import { sanitizeUrl } from './sanitize-url';
 
 export default async function shorten(url: string) {
   let urlToShorten = await sanitizeUrl(url)
@@ -15,7 +15,7 @@ export default async function shorten(url: string) {
     }
   })
     .then(response => {
-      console.log(response.data)
+      console.log(`your shortened link: ${response.data.link}`)
     })
     .catch(err => {
       console.error(`something went wrong: ${err}`)
